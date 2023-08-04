@@ -1,4 +1,4 @@
-# Wyckoff-accumulation-model-train-and-test
+# Detection Of Wyckoff Accumulation Using LSTM (long short term memory)
 
 
 Detect and analyze Wyckoff accumulation patterns in financial markets using machine learning. This repository contains the code for training and testing the Wyckoff accumulation model on historical time series data of various forex currency pairs.
