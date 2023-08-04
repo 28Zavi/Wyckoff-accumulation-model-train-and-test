@@ -1,0 +1,20 @@
+from flask import Flask, request, render_template 
+
+app = Flask(__name__) 
+
+@app.route('/', methods=['GET'])
+def form(): 
+    return render_template('form.html')
+
+@app.route('/detect', methods=['POST']) 
+def detect(): 
+    pair = request.form['pair'] 
+    timeframe = request.form['timeframe'] 
+    # Here you would call your function to fetch data from the TraderMade API 
+    # and run it through your model. For now, we'll just print the form data. 
+    print("Currency pair:", pair) 
+    print("Timeframe:", timeframe) 
+    return "Pattern detection started for pair {} with timeframe {}".format(pair, timeframe) 
+
+if __name__ == '__main__': 
+    app.run(debug=True)
